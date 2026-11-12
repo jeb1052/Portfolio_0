@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive About Section</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===================================================== */
+/* RESET */
+/* ===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#15253F;
+    color:white;
+    font-family:'Poppins', sans-serif;
+    overflow-x:hidden;
+}
+
+/* ===================================================== */
+/* ABOUT TITLE */
+/* ===================================================== */
+
+.About-page{
+    margin-top:120px;
+    text-align:center;
+}
+
+.page-title{
+    font-size:60px;
+    font-weight:700;
+}
+
+/* ===================================================== */
+/* ABOUT 2ND LAYER */
+/* ===================================================== */
+
+.about-2ndlayer{
+    margin-top:175px;
+    margin-left:108px;
+
+    display:flex;
+
+    gap:40px;
+}
+
+/* LEFT SIDE */
+
+.about-me{
+    font-size:13px;
+    font-weight:bolder;
+    line-height:2;
+}
+
+.a-decade{
+    font-size:50px;
+    line-height:1;
+}
+
+.visual{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.about-img{
+    width:554px;
+    height:677px;
+
+    background-image:url('images/JebNaPogi(no_colors).jpg');
+    background-size:cover;
+    background-position:center;
+
+    transition:0.5s ease-in-out;
+}
+
+.about-img:hover{
+    background-image:url('images/JebNaPogi(with_colors).png');
+}
+
+/* RIGHT SIDE */
+
+.my-introduction{
+    display:flex;
+    flex-direction:column;
+
+    width:674px;
+
+    gap:28px;
+
+    font-size:23px;
+
+    margin-top:171px;
+    margin-left:34px;
+}
+
+.resume{
+    margin-top:47px;
+    margin-left:34px;
+}
+
+.resume p{
+    font-size:25px;
+    color:#FF6200;
+    line-height:13px;
+}
+
+#about-ul{
+    margin:0;
+    padding:0;
+}
+
+#about-li{
+    margin-left:50px;
+    font-size:15px;
+}
+
+/* ===================================================== */
+/* SKILLS */
+/* ===================================================== */
+
+.about-3rdlayer{
+    display:flex;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    margin-top:130px;
+
+    width:1239px;
+    height:424px;
+
+    justify-content:space-between;
+}
+
+#txt-skills{
+    position:absolute;
+
+    font-size:45.71px;
+
+    line-height:1;
+}
+
+.skills-container{
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    margin-top:84px;
+}
+
+.skill-group{
+    position:relative;
+
+    width:304px;
+    height:55px;
+}
+
+.skill-group h4{
+    font-size:25px;
+    font-weight:normal;
+}
+
+.skill-group h5{
+    position:absolute;
+    right:0;
+    top:0;
+
+    font-size:20px;
+    font-weight:normal;
+}
+
+.skill-bar{
+    position:absolute;
+
+    top:44px;
+
+    width:296px;
+    height:10px;
+
+    background:white;
+}
+
+.fill-bar{
+    position:absolute;
+
+    top:44px;
+
+    height:10px;
+
+    border-radius:10px;
+
+    background:linear-gradient(to right,#06B6D3,#0DB7BD,#15A195);
+}
+
+/* SKILL WIDTHS */
+
+.Figma{width:290px;}
+.Design{width:266px;}
+.Prototyping{width:236px;}
+.User{width:207px;}
+.Php{width:290px;}
+
+.React{width:207px;}
+.HTML{width:236px;}
+.Tailwind{width:242px;}
+.Next{width:222px;}
+.Laravel{width:266px;}
+
+.Git{width:263px;}
+.Node{width:266px;}
+.Database{width:266px;}
+.Networking{width:219px;}
+.Word{width:266px;}
+
+/* ===================================================== */
+/* WORK STYLE */
+/* ===================================================== */
+
+.about-4thlayer{
+    display:flex;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    margin-top:130px;
+
+    width:1302px;
+
+    margin-bottom:60px;
+}
+
+#txt-workingstyle{
+    font-size:45.71px;
+}
+
+.working-style-container{
+    position:absolute;
+
+    display:flex;
+
+    gap:40px;
+
+    margin-top:90px;
+}
+
+.work-style{
+    width:400px;
+}
+
+.about-orange-bar{
+    position:absolute;
+
+    width:400px;
+    height:5px;
+
+    border-radius:10px;
+
+    background:#FF8000;
+}
+
+.work-style h2{
+    margin-top:13px;
+    font-size:25px;
+}
+
+.work-style p{
+    margin-top:5px;
+
+    color:#C9C9C9;
+
+    font-size:20px;
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+
+@media (max-width:1024px){
+
+    .about-2ndlayer{
+        flex-direction:column;
+
+        margin-left:40px;
+        margin-right:40px;
+    }
+
+    .my-introduction{
+        width:100%;
+
+        margin-top:60px;
+        margin-left:0;
+    }
+
+    .resume{
+        margin-left:0;
+    }
+
+    .about-3rdlayer{
+        width:95%;
+
+        height:auto;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:50px;
+    }
+
+    #txt-skills{
+        position:relative;
+
+        width:100%;
+
+        text-align:center;
+    }
+
+    .skills-container{
+        margin-top:20px;
+    }
+
+    .about-4thlayer{
+        width:95%;
+
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .working-style-container{
+        position:relative;
+
+        flex-direction:column;
+
+        margin-top:50px;
+    }
+}
+
+@media (max-width:768px){
+
+    .About-page{
+        margin-top:90px;
+    }
+
+    .page-title{
+        font-size:40px;
+    }
+
+    .about-2ndlayer{
+        margin-top:90px;
+
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .a-decade,
+    .visual{
+        font-size:38px;
+    }
+
+    .about-img{
+        width:100%;
+        height:500px;
+    }
+
+    .my-introduction{
+        font-size:18px;
+    }
+
+    .resume p{
+        font-size:20px;
+    }
+
+    #about-li{
+        margin-left:25px;
+    }
+
+    #txt-skills,
+    #txt-workingstyle{
+        font-size:35px;
+    }
+
+    .skill-group{
+        width:300px;
+    }
+
+    .skill-bar{
+        width:100%;
+    }
+
+    .work-style{
+        width:100%;
+        max-width:500px;
+    }
+
+    .about-orange-bar{
+        width:100%;
+        max-width:500px;
+    }
+
+    .work-style h2{
+        font-size:22px;
+    }
+
+    .work-style p{
+        font-size:17px;
+    }
+}
+
+@media (max-width:480px){
+
+    .page-title{
+        font-size:32px;
+    }
+
+    .a-decade,
+    .visual{
+        font-size:30px;
+    }
+
+    .about-img{
+        height:400px;
+    }
+
+    .my-introduction{
+        font-size:16px;
+    }
+
+    #txt-skills,
+    #txt-workingstyle{
+        font-size:28px;
+    }
+
+    .skill-group h4{
+        font-size:17px;
+    }
+
+    .skill-group h5{
+        font-size:15px;
+    }
+
+    .work-style p{
+        font-size:15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ABOUT TITLE -->
+
+<div class="About-page">
+    <p class="page-title">
+        ABOUT
+    </p>
+</div>
+
+<!-- ABOUT SECTION -->
+
+<section class="about-2ndlayer">
+
+    <div class="about-me-container">
+
+        <p class="about-me">ABOUT ME</p>
+
+        <p class="a-decade">A decade of</p>
+
+        <p class="visual">visual practice.</p>
+
+        <div class="about-img"></div>
+
+        <p>Jeb Avila, Manila 2024</p>
+
+    </div>
+
+    <div class="my-introduction-container">
+
+        <div class="my-introduction">
+
+            <p>
+                I'm a multidisciplinary creative based in CDO,
+                working at the intersection of photography, motion
+                design, and visual storytelling.
+            </p>
+
+            <p>
+                My process is rooted in curiosity. Every project begins
+                with deep research, evolves through experimentation.
+            </p>
+
+        </div>
+
+        <div class="resume">
+
+            <div class="sections">
+                <p>ACHIEVEMENTS</p>
+
+                <ul id="about-ul">
+                    <li id="about-li">5+ years experience</li>
+                    <li id="about-li">80+ projects delivered</li>
+                    <li id="about-li">Open-source contributor</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="about-3rdlayer">
+
+    <div>
+        <h1 id="txt-skills">SKILLS</h1>
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-group">
+            <h4>Figma</h4>
+            <h5>98%</h5>
+
+            <span class="skill-bar"></span>
+            <span class="fill-bar Figma"></span>
+        </div>
+
+        <div class="skill-group">
+            <h4>HTML & CSS</h4>
+            <h5>80%</h5>
+
+            <span class="skill-bar"></span>
+            <span class="fill-bar HTML"></span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WORK STYLE -->
+
+<section class="about-4thlayer">
+
+    <div>
+        <h1 id="txt-workingstyle">WORKING STYLE</h1>
+    </div>
+
+    <div class="working-style-container">
+
+        <div class="work-style">
+
+            <span class="about-orange-bar"></span>
+
+            <h2>Clarity First</h2>
+
+            <p>
+                I start by defining the problem clearly.
+            </p>
+
+        </div>
+
+        <div class="work-style">
+
+            <span class="about-orange-bar"></span>
+
+            <h2>Iterative Process</h2>
+
+            <p>
+                I prototype fast, test early, and refine constantly.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

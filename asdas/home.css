@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(to right, #3a3a3a, #000);
+    color: white;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.head {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700px;
+    font-style: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAV LINKS */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+
+/* LINK */
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    height: 22px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    position: relative;
+}
+
+/* IMAGE */
+.hero-img {
+    width: 600px;
+    position: absolute;
+    margin-top: 320px;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.6));
+}
+
+/* BIG TEXT */
+.big-text {
+    align-items: center;
+    text-align: end;
+    margin-left: 500px;
+
+    font-size: 350px;
+    font-weight:900;
+    line-height: 0.85;
+
+    color: #cfc2a4;
+    letter-spacing: 2px;
+
+    font-style: italic;
+    text-shadow: h-offset v-offset blur-radius color;
+    text-shadow: 10px 10px 4px rgba(105,105,105);
+}
